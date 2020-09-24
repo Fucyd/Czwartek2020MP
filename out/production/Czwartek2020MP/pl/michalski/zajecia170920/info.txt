@@ -1,0 +1,48 @@
+Zajęcia czwartek 17-09-2020
+Szybkie przypomnienie:
+ typy zmiennych:
+
+  prymitywne          wartość           obiektowe
+    int                25124             Integer
+    long             5235235223345       Long
+    float              5.325             Float
+    double           5.32523523          Double
+    char                'c'              Character
+    boolean          true/false          Boolean
+
+typy metod: takie same jak zmiennych z dodatkowym typem void Void - on nie wymaga od nas zwrócenia wartości
+
+Modyfikatory dostępu do pól/zmiennych/metod
+    public - protected - private
+
+Przykład metody bez parametru:
+ public void przywitajSie(){
+  System.out.println("no hej");
+ }
+
+Przykład metody bez parametru:
+ public int suma(int a, int b){
+  return a+b;
+ }
+
+List:
+    List<Integer> listaLiczbCalkowitych = new ArrayList<>(); - lista liczb całkowitych
+Tablice:
+    int[] tablicaLiczbCalkowitych = new int[10]  - tablica liczb calkowitych 10-cio elementowa
+
+
+ Przydatne skróty:
+sout - System.out.println();
+psvm - tworzy metode główną
+alt+enter
+alt+insert
+
+ctrl+alt+l - formatuje kod - wcięcia itp.
+
+
+ Zadania:
+
+1.
+
+ // napisz metodę, która przyjmie jeden parametr typu String i jeden typu char;
+    // metoda ma zliczyć okręloną liczbę liter w napisie i potem te liczbę zwrócić.
