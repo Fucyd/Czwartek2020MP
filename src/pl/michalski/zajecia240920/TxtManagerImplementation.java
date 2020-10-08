@@ -21,18 +21,23 @@ public class TxtManagerImplementation implements TxtManager {
 
     @Override
     public void wyswietlPlikTxt() throws IOException {
-        Scanner scanner = new Scanner(new File("/home/piotr/IdeaProjects/Czwartek2020MP/src/pl/michalski/zajecia240920/dane.txt"));
-        while (scanner.hasNextLine()){
-            System.out.println(scanner.nextLine());
+        Integer min = 255;
+        Integer max =0;
+        Scanner scanner = new Scanner(new File("/home/piotr/Pulpit/Dane_PR2/dane-matura.txt"));
+        while (scanner.hasNext()){
+            Integer liczba = Integer.parseInt(scanner.next());
+            if(liczba < min){ min = liczba; }
+            if(liczba > max){ max = liczba; }
         }
         scanner.close();
+        System.out.println("Min: " + min);
+        System.out.println("Max: " + max);
     }
 
     public static void main(String[] args) throws IOException {
         TxtManager txtManager = new TxtManagerImplementation();
         txtManager.wyswietlPlikTxt();
-        System.out.println("------Po Zmianie---------");
-        for(int x = 0; x<10000; x++ ) txtManager.dodajDoPliku("Za szybko robi sie ciemno");
-        txtManager.wyswietlPlikTxt();
-    }
+        }
 }
+//  1 2 4 5 9 10  | 10 9 5 4 2 1    // ma pionową oś symetrii
+//  1 2 4 5 9 10  | 10 9 5 4 2 2  // nie ma pionowej osi symetrii
